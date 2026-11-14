@@ -1,19 +1,24 @@
+class_name Player_Character
 extends CharacterBody3D
 
 
 const SPEED = 5.0
+const RAY_LENGTH = 5.0
+
+var sensitivity = 1.5
 @onready var camera = $Camera3D
 @onready var area_hit = $Camera3D/ShapeCast3D
-@onready var reel = $TextEdit
+@onready var reel = $Label
 #const JUMP_VELOCITY = 4.5
 var film: int;
+
 
 
 func _ready() -> void:
 	for i in self.get_meta("exclude_detection"):
 		area_hit.add_exception(get_node(i))
 	film =self.get_meta("Film_Left")
-	#reel.text(film) #need to actually get the text, this isn't the right function.
+	reel.set_text("Remaining Film: "+str(film)) #need to actually get the text, this isn't the right function.
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -41,8 +46,8 @@ func _physics_process(delta: float) -> void:
 func _look()->void:
 	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
 	#print(rotate)
-	self.rotation.y-=deg_to_rad(rotate.x)
-	camera.rotation.x-=deg_to_rad(rotate.y)#We don't need to pitch the player up and down, but the camera.
+	self.rotation.y-=deg_to_rad(rotate.x*sensitivity)
+	camera.rotation.x-=deg_to_rad(rotate.y*sensitivity)#We don't need to pitch the player up and down, but the camera.
 	rotate = Vector2()
 	pass
 	
@@ -55,4 +60,14 @@ func _take_photo()->void:
 			print ("Nothing found")
 		else:
 			for i in hits:
+				#var space_state = get_world_3d().direct_space_state
+				#var origin = camera.global_position
+				#var end = origin + (i.point * RAY_LENGTH)
+				#var query = PhysicsRayQueryParameters3D.create(origin, end)
+				#var result = space_state.intersect_ray(query)
+				#if result.get_collider().get_parent().get_script().get_global_name() == :
 				print(i.collider_id)
+				#print(i.collider_id)
+				
+		film-=1
+		reel.set_text("Remaining Film: "+str(film))
