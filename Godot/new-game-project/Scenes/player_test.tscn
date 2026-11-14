@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://css3mpiudynko"]
+
+[ext_resource type="PackedScene" uid="uid://0fagbk3765yo" path="res://Scenes/player_controller.tscn" id="1_xjjte"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4p277"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_acvas"]
+points = PackedVector3Array(1.0158731, 0.015873017, 1.0158731, -1.0158731, -0.015873017, -1.0158731, -1.0158731, 0.015873017, -1.0158731, 1.0158731, -0.015873017, -1.0158731, -1.0158731, -0.015873017, 1.0158731, -1.0158731, 0.015873017, 1.0158731, 1.0158731, 0.015873017, -1.0158731, 1.0158731, -0.015873017, 1.0158731)
+
+[node name="PlayerTest" type="Node3D" unique_id=1727611017]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1230564905]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=262062011]
+mesh = SubResource("PlaneMesh_4p277")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1396605551]
+shape = SubResource("ConvexPolygonShape3D_acvas")
+
+[node name="PlayerController" parent="." unique_id=939360635 instance=ExtResource("1_xjjte")]
