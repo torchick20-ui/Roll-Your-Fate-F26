@@ -4,18 +4,19 @@ extends CharacterBody3D
 const SPEED = 5.0
 @onready var camera = $Camera3D
 #const JUMP_VELOCITY = 4.5
+var film: int;
+const RAY_LENGTH = 1000.0
 
-#func _unhandled_input(event: InputEvent) -> void:
-#	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
+#func _unhandled_input(event) -> void:
+#	if event is InputEventKey and event.pressed and event.keycode == "Take Photo":
+#		print("Photo taken")
+#		var from = camera.project_ray_origin(event.position)
+#		var to = from + camera.project_ray_normal(event.position) * RAY_LENGTH
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
-	# Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-	#	velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -30,12 +31,15 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	_look()
+	
+	if Input.is_action_just_pressed("Take Photo"):
+		print("Photo taken")
 
 
 func _look()->void:
 	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
-	print(rotate)
+	#print(rotate)
 	self.rotation.y-=deg_to_rad(rotate.x)
-	self.rotation.x-=deg_to_rad(rotate.y)
+	camera.rotation.x-=deg_to_rad(rotate.y)#We don't need to pitch the player up and down, but the camera.
 	rotate = Vector2()
 	pass
