@@ -1,13 +1,13 @@
 {
   "profiles": {
-    "Roll Your Fate (Fall 26)": {
-      "commandName": "Project"
-    },
-    "Profile 1": {
-      "commandName": "Executable",
-      "executablePath": "C:\\Users\\k1w14\\Downloads\\Godot_v4.7.2-stable_mono_win64\\Godot_v4.7.2-stable_mono_win64\\Godot_v4.7.2-stable_mono_win64.exe",
-      "workingDirectory": ".",
-      "nativeDebugging": true
-    }
+	"Roll Your Fate (Fall 26)": {
+	  "commandName": "Project"
+	},
+	"Profile 1": {
+	  "commandName": "Executable",
+	  "executablePath": "C:\\Users\\k1w14\\Downloads\\Godot_v4.7.2-stable_mono_win64\\Godot_v4.7.2-stable_mono_win64\\Godot_v4.7.2-stable_mono_win64.exe",
+	  "workingDirectory": ".",
+	  "nativeDebugging": true
+	}
   }
 }
