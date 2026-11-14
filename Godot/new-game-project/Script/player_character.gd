@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 
 const SPEED = 5.0
-const RAY_LENGTH = 5.0
+#const RAY_LENGTH = 5.0
 
 var sensitivity = 1.5
 @onready var camera = $Camera3D
@@ -66,7 +66,7 @@ func _take_photo()->void:
 				#var query = PhysicsRayQueryParameters3D.create(origin, end)
 				#var result = space_state.intersect_ray(query)
 				#if result.get_collider().get_parent().get_script().get_global_name() == :
-				print(i.collider_id)
+				print(i.collider.get_parent)
 				#print(i.collider_id)
 				
 		film-=1

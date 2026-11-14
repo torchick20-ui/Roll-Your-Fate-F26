@@ -20,6 +20,7 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
 shape = SubResource("BoxShape3D_c7fo0")
 target_position = Vector3(0, 1.5, -3)
+collide_with_areas = true
 
 [node name="Player Collision" type="CollisionShape3D" parent="." unique_id=2142267180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
