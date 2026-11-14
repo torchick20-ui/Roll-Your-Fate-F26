@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dbccwxulj5g3g"]
+
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://entity.gd" id="1_6e8rh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+
+[node name="Node3D" type="Node3D" unique_id=1130119407]
+script = ExtResource("1_6e8rh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=702689896]
+
+[node name="Area3D2" type="Area3D" parent="." unique_id=1379324112]
+
+[node name="Area3D" type="CollisionShape3D" parent="Area3D2" unique_id=1508031514]
+shape = SubResource("SphereShape3D_vtbqs")

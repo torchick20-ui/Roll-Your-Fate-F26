@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 
 #called via signal on player movement
 func screen_enter(screenNum : int, player : CharacterBody3D):
+	for i in get_children():
+		i.queue_free()
 	#marking what spots have entities in them
 	var spotsTaken = []
 	for i in range(spawningSpots[screenNum].size()):
@@ -57,8 +59,8 @@ func screen_enter(screenNum : int, player : CharacterBody3D):
 				spot = randi_range(0, spawningSpots[screenNum].size())
 			temp.position = spawningSpots[screenNum][spot]
 			add_child(temp)
-	
+
 
 #called via signal on picture taken
-func picture_taken(picture : Area3D) -> Array[String]:
+func picture_taken() -> Array[String]:
 	return []
