@@ -9,6 +9,10 @@ extends Node
 var animalSpawnrates : Dictionary = {"Owl": 10, "Possum" : 20, "Squirrel" : 50}
 var enemySpawnrates : Dictionary = {"Door" : 5, "Cup" : 5, "Vending Machine" : 5}
 
+#Preloaded objects of the entities for instancing
+var animalObjects : Dictionary[String,PackedScene] = {}
+var enemyObjects : Dictionary = {}
+
 #2D array of vector3s of possible spawning locations for the animals/entities
 var spawningSpots : Array[Array] = []
 
@@ -23,8 +27,40 @@ func _process(delta: float) -> void:
 
 #called via signal on player movement
 func screen_enter(screenNum : int, player : CharacterBody3D):
-	pass
+	for i in get_children():
+		i.queue_free()
+	#marking what spots have entities in them
+	var spotsTaken = []
+	for i in range(spawningSpots[screenNum].size()):
+		spotsTaken.append(false)
+	
+	#for each animal has a chance to spawn them, chooses a unique location to position them in
+	var animalsSpawned = 0
+	for i in animalSpawnrates:
+		if randf_range(0,100) <= animalSpawnrates[i] and animalsSpawned < 2:
+			animalsSpawned += 1
+			var temp = animalObjects[i].instantiate()
+			#prevents multiple things from taking up the same spot
+			var spot = randi_range(0, spawningSpots[screenNum].size())
+			while !spotsTaken[spot]:
+				spot = randi_range(0, spawningSpots[screenNum].size())
+			temp.position = spawningSpots[screenNum][spot]
+			add_child(temp)
+			
+	#same but for enemies, max of 1 onscreen
+	var enemiesSpawned = 0
+	for i in enemySpawnrates:
+		if randf_range(0,100) <= enemySpawnrates[i] and enemiesSpawned < 1:
+			enemiesSpawned += 1
+			var temp = enemyObjects[i].instantiate()
+			#prevents multiple things from taking up the same spot
+			var spot = randi_range(0, spawningSpots[screenNum].size())
+			while !spotsTaken[spot]:
+				spot = randi_range(0, spawningSpots[screenNum].size())
+			temp.position = spawningSpots[screenNum][spot]
+			add_child(temp)
+
 
 #called via signal on picture taken
-func picture_taken(picture : Area3D) -> Array[String]:
+func picture_taken() -> Array[String]:
 	return []
