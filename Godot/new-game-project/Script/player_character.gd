@@ -3,15 +3,18 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 @onready var camera = $Camera3D
+@onready var area_hit = $Camera3D/ShapeCast3D
+@onready var reel = $TextEdit
 #const JUMP_VELOCITY = 4.5
 var film: int;
-const RAY_LENGTH = 1000.0
 
-#func _unhandled_input(event) -> void:
-#	if event is InputEventKey and event.pressed and event.keycode == "Take Photo":
-#		print("Photo taken")
-#		var from = camera.project_ray_origin(event.position)
-#		var to = from + camera.project_ray_normal(event.position) * RAY_LENGTH
+
+func _ready() -> void:
+	for i in self.get_meta("exclude_detection"):
+		area_hit.add_exception(get_node(i))
+	film =self.get_meta("Film_Left")
+	#reel.text(film) #need to actually get the text, this isn't the right function.
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -31,9 +34,8 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	_look()
+	_take_photo()
 	
-	if Input.is_action_just_pressed("Take Photo"):
-		print("Photo taken")
 
 
 func _look()->void:
@@ -43,3 +45,14 @@ func _look()->void:
 	camera.rotation.x-=deg_to_rad(rotate.y)#We don't need to pitch the player up and down, but the camera.
 	rotate = Vector2()
 	pass
+	
+
+func _take_photo()->void:
+	if Input.is_action_just_pressed("Take Photo"):
+		print("Photo taken")
+		var hits = area_hit.collision_result
+		if hits.size()<=0:
+			print ("Nothing found")
+		else:
+			for i in hits:
+				print(i.collider_id)
