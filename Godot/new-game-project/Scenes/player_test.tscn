@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://css3mpiudynko"]
 
 [ext_resource type="PackedScene" uid="uid://0fagbk3765yo" path="res://Scenes/player_controller.tscn" id="1_xjjte"]
+[ext_resource type="PackedScene" uid="uid://b6tqm4r6b4e7c" path="res://sample.tscn" id="2_acvas"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4p277"]
 
@@ -24,7 +25,7 @@ mesh = SubResource("PlaneMesh_4p277")
 shape = SubResource("ConvexPolygonShape3D_acvas")
 
 [node name="PlayerController" parent="." unique_id=939360635 instance=ExtResource("1_xjjte")]
-metadata/exclude_detection = [NodePath("."), NodePath("../Floor")]
+metadata/exclude_detection = [NodePath("."), NodePath("../Floor"), NodePath("../StaticBody3D2")]
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=305073262]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5119877, 1, -6.2462173)
@@ -37,3 +38,6 @@ shape = SubResource("ConvexPolygonShape3D_xjjte")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1235171269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5495758, 6.290962, -1.7855228)
+
+[node name="Sample" parent="." unique_id=1069840899 instance=ExtResource("2_acvas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.867878, 1.005415, -7.49432)

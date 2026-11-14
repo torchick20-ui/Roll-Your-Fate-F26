@@ -66,7 +66,9 @@ func _take_photo()->void:
 				#var query = PhysicsRayQueryParameters3D.create(origin, end)
 				#var result = space_state.intersect_ray(query)
 				#if result.get_collider().get_parent().get_script().get_global_name() == :
-				print(i.collider.get_parent)
+				if i.collider.get_parent().has_method("entity"):
+					print(i.collider.get_parent().entityName)
+				print(i.collider.get_parent())
 				#print(i.collider_id)
 				
 		film-=1
