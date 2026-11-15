@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://87xiefbny8dq" path="res://Images/Raccoon.png" id="9_pw6c3"]
 [ext_resource type="Texture2D" uid="uid://oigawg7ydeoe" path="res://Images/NightHawk.png" id="10_djgpu"]
 [ext_resource type="Texture2D" uid="uid://b6qd3kirr7ci8" path="res://Images/Opossum.png" id="11_tnm7e"]
+[ext_resource type="AudioStream" uid="uid://bfxi5gdj74ia0" path="res://Script/Photo Forest.wav" id="14_gfl13"]
 [ext_resource type="PackedScene" uid="uid://0fagbk3765yo" path="res://Scenes/player_controller.tscn" id="15_4xied"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2fbs"]
@@ -383,5 +384,9 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -117.17618, 51.858704, 49.244
 
 [node name="Tree94" parent="Scene2Trees" unique_id=1822016355 instance=ExtResource("9_djgpu")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 110.84224)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=186109283]
+stream = ExtResource("14_gfl13")
+autoplay = true
 
 [connection signal="sceneChange" from="PlayerController" to="Node" method="screen_enter"]
