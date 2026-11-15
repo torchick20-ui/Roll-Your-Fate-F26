@@ -4,7 +4,7 @@ class_name entity
 @onready var camera : CharacterBody3D = $"../PlayerController"
 @export var sprites :  Array[Texture] = []
 @export var entityName : String = "Vending Machine"
-@onready var sprite = $Sprite2D
+@onready var sprite = $Sprite3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
