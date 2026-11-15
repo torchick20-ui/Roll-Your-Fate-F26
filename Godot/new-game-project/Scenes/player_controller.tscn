@@ -146,7 +146,7 @@ offset_left = 8.991943
 offset_top = 2.8719993
 offset_right = -0.39208984
 offset_bottom = -0.21601868
-text = "Left Stick: Move Character
+text = "Left Stick: Turn 180
 Right Stick: Move Camera
 Press Left Stick: Open Photos
 When Photos Open:

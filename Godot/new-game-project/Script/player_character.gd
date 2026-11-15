@@ -11,6 +11,7 @@ var sensitivity = 1.5
 @onready var reel = $Label
 @onready var album = $TextureRect
 #const JUMP_VELOCITY = 4.5
+var picturesTaken = {"Owl" : false, "Raccoon" : false, "Squirrel" : false, "Hawk" : false, "Opossum" : false}
 var film: int
 var photos: Array
 var open_album: bool
@@ -119,6 +120,7 @@ func _take_photo()->void:
 	if Input.is_action_just_pressed("Take Photo"):
 		print("Photo taken")
 		var hits = area_hit.collision_result
+		var screenshot = get_viewport().get_texture().get_image()#.get_region(screen_region)
 		if hits.size()<=0:
 			print ("Nothing found")
 		else:
@@ -130,11 +132,19 @@ func _take_photo()->void:
 				#var result = space_state.intersect_ray(query)
 				#if result.get_collider().get_parent().get_script().get_global_name() == :
 				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName != "Tree":
+					var temp = i.collider.get_parent().entityName
 					print(i.collider.get_parent().entityName)
+					if temp in picturesTaken:
+						picturesTaken[temp] = true
+					elif temp == "Cup":
+						film -= 5
+					elif temp == "Door":
+						get_tree().change_scene_to_file("res://Scenes/door scene.tscn")
+					elif temp == "Vending Machine":
+						screenshot = preload("res://Images/VendingMachine.png")
 				#print(i.collider_id)
 				
 		#var screen_region := Rect2i(get_viewport().siz, size) 
-		var screenshot = get_viewport().get_texture().get_image()#.get_region(screen_region)
 		photos.push_back(screenshot)
 		film-=1
 		reel.set_text("Remaining Film: "+str(film))

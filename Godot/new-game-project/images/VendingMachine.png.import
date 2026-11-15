@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gp8ltviulikm"
-path.s3tc="res://.godot/imported/VendingMachine.png-1ffc5c67ea7bbf87968f9e069c1855d5.s3tc.ctex"
+path.s3tc="res://.godot/imported/VendingMachine.png-49cb4ed7e1ee2871f3ec51016e1d7b1a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://images/VendingMachine.png"
-dest_files=["res://.godot/imported/VendingMachine.png-1ffc5c67ea7bbf87968f9e069c1855d5.s3tc.ctex"]
+source_file="res://Images/VendingMachine.png"
+dest_files=["res://.godot/imported/VendingMachine.png-49cb4ed7e1ee2871f3ec51016e1d7b1a.s3tc.ctex"]
 
 [params]
 
