@@ -1,18 +1,8 @@
-[gd_scene format=3 uid="uid://dv8h4wt2onj0h"]
+[gd_scene format=3 uid="uid://cj3o6mhbsxb1"]
 
-[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_b4f3f"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Images/icon.svg" id="2_b4f3f"]
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://entity.gd" id="1_5a64n"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+[node name="Owl" type="Node3D" unique_id=1031466047]
+script = ExtResource("1_5a64n")
 
-[node name="Sample" type="Node3D" unique_id=1069840899]
-script = ExtResource("1_b4f3f")
-entityName = "Sample"
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264208238]
-texture = ExtResource("2_b4f3f")
-
-[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
-shape = SubResource("SphereShape3D_vtbqs")
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=790945901]
