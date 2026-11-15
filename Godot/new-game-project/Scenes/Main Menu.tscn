@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dfrw67jn5kxk7"]
+
+[ext_resource type="Script" uid="uid://i4br3gm27jp0" path="res://Scenes/start_button.gd" id="1_totuj"]
+[ext_resource type="Script" uid="uid://cp4tlme5a1uac" path="res://Scenes/exit_button.gd" id="2_hcxxy"]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_hcxxy"]
+button_index = 8
+
+[sub_resource type="Shortcut" id="Shortcut_totuj"]
+events = [SubResource("InputEventJoypadButton_hcxxy")]
+
+[node name="MainMenu" type="Node2D" unique_id=1468803633]
+
+[node name="Control" type="Control" parent="." unique_id=87946680]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+
+[node name="Start Button" type="Button" parent="Control" unique_id=1480842461]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 179.0
+offset_right = 439.0
+offset_bottom = 273.0
+focus_neighbor_top = NodePath("../Exit Button")
+focus_neighbor_bottom = NodePath("../Exit Button")
+shortcut = SubResource("Shortcut_totuj")
+text = "Start Game"
+script = ExtResource("1_totuj")
+
+[node name="Exit Button" type="Button" parent="Control" unique_id=1766036203]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 389.0
+offset_right = 439.0
+offset_bottom = 483.0
+focus_neighbor_top = NodePath("../Start Button")
+focus_neighbor_bottom = NodePath("../Start Button")
+text = "Exit Game"
+script = ExtResource("2_hcxxy")
