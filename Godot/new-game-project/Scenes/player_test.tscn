@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://css3mpiudynko"]
 
 [ext_resource type="PackedScene" uid="uid://0fagbk3765yo" path="res://Scenes/player_controller.tscn" id="1_xjjte"]
-[ext_resource type="PackedScene" uid="uid://b6tqm4r6b4e7c" path="res://Entites/sample.tscn" id="2_acvas"]
+[ext_resource type="PackedScene" uid="uid://u6e5opfod34u" path="res://Entites/tree_1.tscn" id="2_acvas"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4p277"]
 
@@ -39,5 +39,5 @@ shape = SubResource("ConvexPolygonShape3D_xjjte")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1235171269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5495758, 6.290962, -1.7855228)
 
-[node name="Sample" parent="." unique_id=1069840899 instance=ExtResource("2_acvas")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.867878, 1.005415, -7.49432)
+[node name="Tree1" parent="." unique_id=1964777732 instance=ExtResource("2_acvas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7569809, 0, -5.293992)
