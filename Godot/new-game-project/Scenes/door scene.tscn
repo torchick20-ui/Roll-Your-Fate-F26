@@ -1,10 +1,24 @@
 [gd_scene format=3 uid="uid://uhuwapbpyw35"]
 
-[ext_resource type="Texture2D" uid="uid://32873i7pnylu" path="res://Images/Door.png" id="1_6koes"]
+[ext_resource type="Texture2D" uid="uid://32873i7pnylu" path="res://images/Door.png" id="1_6koes"]
+[ext_resource type="Script" uid="uid://kwyge1ofengy" path="res://Scenes/door_scene.gd" id="1_tx0m4"]
+[ext_resource type="Script" uid="uid://nnu7fcmm3t6c" path="res://Scenes/label.gd" id="3_cr3b4"]
 
 [node name="Node2D" type="Node2D" unique_id=1425327848]
+script = ExtResource("1_tx0m4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=96648532]
 position = Vector2(585, 328)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_6koes")
+
+[node name="Label" type="Label" parent="." unique_id=1738531182]
+offset_left = 481.0
+offset_top = 127.0
+offset_right = 761.0
+offset_bottom = 269.0
+text = "You Lost
+Press Escape to Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_cr3b4")
