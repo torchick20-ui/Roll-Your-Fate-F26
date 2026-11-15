@@ -156,7 +156,7 @@ func _take_photo()->void:
 		var win = true
 	
 		for i in picturesTaken:
-			if not i:
+			if not picturesTaken[i]:
 				win = false
 		if win:
 			$Label3.visible = true
