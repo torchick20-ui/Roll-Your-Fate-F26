@@ -9,6 +9,7 @@
 script = ExtResource("1_o2nwm")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264208238]
+billboard = 2
 texture = ExtResource("2_uoav1")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
