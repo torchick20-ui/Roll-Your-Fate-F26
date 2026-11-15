@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 
 	if distFromCam < 8:
 		sprite.modulate = Color(1.0, 1.0, 1.0)
-		print(entityName == "Tree")
 	elif distFromCam < 10:
 		sprite.modulate = Color(0.678, 0.561, 0.839, 1.0)
 	elif distFromCam < 12:

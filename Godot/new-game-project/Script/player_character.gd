@@ -54,11 +54,24 @@ func _physics_process(delta: float) -> void:
 
 
 func _look()->void:
+	
 	#print(Input.is_action_pressed("Look Left"))
 	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
-	#print(rotate)
-	self.rotation.y-=deg_to_rad(rotate.x*sensitivity)
+	print(camera.rotation)
+	camera.rotation.y-=deg_to_rad(rotate.x*sensitivity)
 	camera.rotation.x-=deg_to_rad(rotate.y*sensitivity)#We don't need to pitch the player up and down, but the camera.
+	
+	#clamps rotation to left and right
+	if camera.rotation.y > 1.3:
+		camera.rotation.y = 1.3
+	if camera.rotation.y < -1.3:
+		camera.rotation.y = -1.3
+	
+	#clamps rotation up and down
+	if camera.rotation.x > .7:
+		camera.rotation.x = .7
+	if camera.rotation.x < -.8:
+		camera.rotation.x = -.8
 	rotate = Vector2()
 	pass
 	
