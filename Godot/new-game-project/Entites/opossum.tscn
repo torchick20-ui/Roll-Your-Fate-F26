@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c2wx0dek74n6u"]
+
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_5ml4m"]
+[ext_resource type="Texture2D" uid="uid://b6qd3kirr7ci8" path="res://Images/Opossum.png" id="2_uylgx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+
+[node name="Opossum" type="Node3D" unique_id=1069840899]
+script = ExtResource("1_5ml4m")
+entityName = "Opossum"
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264208238]
+texture = ExtResource("2_uylgx")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
+shape = SubResource("SphereShape3D_vtbqs")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://css3mpiudynko"]
 
 [ext_resource type="PackedScene" uid="uid://0fagbk3765yo" path="res://Scenes/player_controller.tscn" id="1_xjjte"]
-[ext_resource type="PackedScene" uid="uid://b6tqm4r6b4e7c" path="res://sample.tscn" id="2_acvas"]
+[ext_resource type="PackedScene" uid="uid://b6tqm4r6b4e7c" path="res://Entites/sample.tscn" id="2_acvas"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4p277"]
 

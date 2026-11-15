@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crv8451yn0oxh"]
+
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_utpk5"]
+[ext_resource type="Texture2D" uid="uid://v6uxgm0hx502" path="res://Images/Cup.png" id="2_rlihj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+
+[node name="Cup" type="Node3D" unique_id=1069840899]
+script = ExtResource("1_utpk5")
+entityName = "Cup"
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264208238]
+texture = ExtResource("2_rlihj")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
+shape = SubResource("SphereShape3D_vtbqs")
