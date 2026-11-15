@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b6qd3kirr7ci8" path="res://images/Opossum.png" id="11_tnm7e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2fbs"]
-albedo_color = Color(0.015686275, 0.007843138, 0.039215688, 1)
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ed6v6"]
 material = SubResource("StandardMaterial3D_e2fbs")
@@ -47,50 +47,314 @@ modulate = Color(0.6156863, 0.31764707, 0.61960787, 1)
 billboard = 2
 texture = ExtResource("3_trx64")
 
-[node name="Tree1" type="Sprite3D" parent="." unique_id=1686050717]
+[node name="Tree1" type="Sprite3D" parent="." unique_id=1686050717 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -25.09259, 31.108261, 0)
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
 
-[node name="Tree2" type="Sprite3D" parent="." unique_id=337641847]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 19.818268, 49.76973, -60.84694)
+[node name="Tree7" type="Sprite3D" parent="." unique_id=1103040922 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, 36.100304)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree8" type="Sprite3D" parent="." unique_id=749797022 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, 95.19508)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree9" type="Sprite3D" parent="." unique_id=215027008 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, -55.9048)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree10" type="Sprite3D" parent="." unique_id=545454365 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, -101.93434)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree11" type="Sprite3D" parent="." unique_id=1695917861 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -101.93434)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree12" type="Sprite3D" parent="." unique_id=898516560 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -8.763313)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree35" type="Sprite3D" parent="." unique_id=603163267 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -70.47209, 31.108261, -8.763313)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree36" type="Sprite3D" parent="." unique_id=277629090 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -70.47209, 31.108261, 96.27318)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree37" type="Sprite3D" parent="." unique_id=1344382215 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 96.27318)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree38" type="Sprite3D" parent="." unique_id=583875881 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 50.02491)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree39" type="Sprite3D" parent="." unique_id=633355398 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 19.515808)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree40" type="Sprite3D" parent="." unique_id=1002888836 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, -47.547134)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree41" type="Sprite3D" parent="." unique_id=1764494184 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, -91.31028)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree13" type="Sprite3D" parent="." unique_id=972631017 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 51.611664)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree25" type="Sprite3D" parent="." unique_id=2045057606 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 22.294758)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree26" type="Sprite3D" parent="." unique_id=838370787 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -73.43956)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree27" type="Sprite3D" parent="." unique_id=2038217573 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.443665, 31.108261, -73.43956)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree28" type="Sprite3D" parent="." unique_id=1783600948 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.443665, 31.108261, 39.3918)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree14" type="Sprite3D" parent="." unique_id=1748314652 groups=["Trees"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 93.77671)
+modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
+billboard = 2
+texture = ExtResource("4_e2fbs")
+
+[node name="Tree2" type="Sprite3D" parent="." unique_id=337641847 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.3184433, 49.76973, -60.84694)
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
 
-[node name="Tree3" type="Sprite3D" parent="." unique_id=737574981]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -50.61302, 51.858704, 0)
+[node name="Tree29" type="Sprite3D" parent="." unique_id=1401429510 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 54.055832, 49.76973, 69.178894)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree30" type="Sprite3D" parent="." unique_id=736519813 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 71.53317, 49.76973, 38.198967)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree31" type="Sprite3D" parent="." unique_id=316084478 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 93.41745, 49.76973, 3.7970161)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree32" type="Sprite3D" parent="." unique_id=1070939140 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 63.858704, 49.76973, -52.956646)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree42" type="Sprite3D" parent="." unique_id=773177360 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.0283737, 49.76973, -32.69781)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree43" type="Sprite3D" parent="." unique_id=1309356834 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, -93.52172)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree44" type="Sprite3D" parent="." unique_id=1090337574 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, -115.29787)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree45" type="Sprite3D" parent="." unique_id=1538205111 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 40.606102, 49.76973, 13.15834)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree46" type="Sprite3D" parent="." unique_id=1268562998 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, 71.09609)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree47" type="Sprite3D" parent="." unique_id=304311815 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 26.569473, 49.76973, 102.93316)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree33" type="Sprite3D" parent="." unique_id=1132630415 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 51.415924, 49.76973, -104.5728)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree34" type="Sprite3D" parent="." unique_id=1548315949 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 35.72792, 49.76973, -60.258442)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree15" type="Sprite3D" parent="." unique_id=513165429 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -71.07456, 49.76973, 54.481606)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree16" type="Sprite3D" parent="." unique_id=1286126451 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -63.279274, 49.76973, 108.32404)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree17" type="Sprite3D" parent="." unique_id=77616665 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -69.02594, 49.76973, -62.454765)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree18" type="Sprite3D" parent="." unique_id=1486186652 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -70.91893, 49.61554, -102.093605)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree19" type="Sprite3D" parent="." unique_id=1707490185 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, -24.476921)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree20" type="Sprite3D" parent="." unique_id=1754042822 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, -89.934525)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree21" type="Sprite3D" parent="." unique_id=1891859577 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, 81.90993)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree22" type="Sprite3D" parent="." unique_id=958490453 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, 67.859276)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree23" type="Sprite3D" parent="." unique_id=337930305 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, -25.01503)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree24" type="Sprite3D" parent="." unique_id=1131395251 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, -65.32928)
+modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
+billboard = 2
+texture = ExtResource("5_wjun0")
+
+[node name="Tree3" type="Sprite3D" parent="." unique_id=737574981 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -50.467117, 51.539276, 0.26872253)
+modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
+billboard = 2
+texture = ExtResource("6_j3sk6")
+
+[node name="Tree4" type="Sprite3D" parent="." unique_id=1204847398 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 0)
+modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
+billboard = 2
+texture = ExtResource("6_j3sk6")
+
+[node name="Tree5" type="Sprite3D" parent="." unique_id=628689910 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -117.17618, 51.858704, 49.244614)
+modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
+billboard = 2
+texture = ExtResource("6_j3sk6")
+
+[node name="Tree6" type="Sprite3D" parent="." unique_id=1506456990 groups=["Trees"]]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 110.84224)
 modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
 billboard = 2
 texture = ExtResource("6_j3sk6")
 
 [node name="Owl" type="Sprite3D" parent="." unique_id=1656771908]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 73.29227, -102.310486)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.65706, 73.29227, 33.09996)
 modulate = Color(0.27058825, 0.1764706, 0.4862745, 1)
 billboard = 2
 texture = ExtResource("7_gfl13")
 
 [node name="Squirrel" type="Sprite3D" parent="." unique_id=530221401]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.71408, 23.866285, -21.748947)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.398983, 67.10502, -57.245934)
 modulate = Color(0.21568628, 0.101960786, 0.39607844, 1)
 billboard = 2
 texture = ExtResource("8_4xied")
 
 [node name="Raccoon" type="Sprite3D" parent="." unique_id=254760004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.927156, 60.943222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.485435, 62.86084, -46.20835)
 modulate = Color(0.23921569, 0.11372549, 0.42352942, 1)
 billboard = 2
 texture = ExtResource("9_pw6c3")
 
 [node name="NightHawk" type="Sprite3D" parent="." unique_id=1399583228]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.609625, 50.332756, -101.68571)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.68539, 50.332756, 56.920937)
 modulate = Color(0.8862745, 0.7529412, 0.8862745, 1)
 billboard = 2
 texture = ExtResource("10_djgpu")
 
 [node name="Opossum" type="Sprite3D" parent="." unique_id=243617630]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.989899, -44.73813)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.953762, 35.99779, -111.19433)
 modulate = Color(0.3137255, 0.17254902, 0.40784314, 1)
 billboard = 2
 texture = ExtResource("11_tnm7e")
