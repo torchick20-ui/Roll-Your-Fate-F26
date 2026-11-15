@@ -4,10 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://32873i7pnylu" path="res://Images/Door.png" id="2_uvcgv"]
 [ext_resource type="Texture2D" uid="uid://gp8ltviulikm" path="res://Images/VendingMachine.png" id="3_trx64"]
 [ext_resource type="Texture2D" uid="uid://bpofonikucbdj" path="res://Images/Tree1.png" id="4_e2fbs"]
+[ext_resource type="PackedScene" uid="uid://u6e5opfod34u" path="res://Entites/tree_1.tscn" id="5_gfl13"]
 [ext_resource type="Texture2D" uid="uid://4x57mcgftkcm" path="res://Images/Tree2.png" id="5_wjun0"]
 [ext_resource type="Texture2D" uid="uid://csv7iaex3nb5l" path="res://Images/Tree3.png" id="6_j3sk6"]
+[ext_resource type="PackedScene" uid="uid://dbkrmw2xlk48e" path="res://Entites/tree_2.tscn" id="7_4xied"]
 [ext_resource type="Texture2D" uid="uid://cf0vur4bvtc22" path="res://Images/Owl.png" id="7_gfl13"]
 [ext_resource type="Texture2D" uid="uid://dpalxujlurk5m" path="res://Images/FlyingSquirrel.png" id="8_4xied"]
+[ext_resource type="PackedScene" uid="uid://jokc0lnlynkp" path="res://Entites/tree_3.tscn" id="9_djgpu"]
 [ext_resource type="Texture2D" uid="uid://87xiefbny8dq" path="res://Images/Raccoon.png" id="9_pw6c3"]
 [ext_resource type="Texture2D" uid="uid://oigawg7ydeoe" path="res://Images/NightHawk.png" id="10_djgpu"]
 [ext_resource type="Texture2D" uid="uid://b6qd3kirr7ci8" path="res://Images/Opossum.png" id="11_tnm7e"]
@@ -49,288 +52,477 @@ texture = ExtResource("3_trx64")
 
 [node name="Tree1" type="Sprite3D" parent="." unique_id=1686050717 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -25.09259, 31.108261, 0)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree48" parent="." unique_id=1964777732 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -25.09259, 31.108261, 0)
 
 [node name="Tree7" type="Sprite3D" parent="." unique_id=1103040922 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, 36.100304)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree49" parent="." unique_id=1528396254 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, 36.100304)
 
 [node name="Tree8" type="Sprite3D" parent="." unique_id=749797022 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, 95.19508)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree50" parent="." unique_id=1662534522 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, 95.19508)
 
 [node name="Tree9" type="Sprite3D" parent="." unique_id=215027008 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, -55.9048)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree51" parent="." unique_id=468957107 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, -55.9048)
 
 [node name="Tree10" type="Sprite3D" parent="." unique_id=545454365 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, -101.93434)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree52" parent="." unique_id=663258927 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -95.159515, 31.108261, -101.93434)
 
 [node name="Tree11" type="Sprite3D" parent="." unique_id=1695917861 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -101.93434)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree53" parent="." unique_id=1676864212 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -101.93434)
 
 [node name="Tree12" type="Sprite3D" parent="." unique_id=898516560 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -8.763313)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree54" parent="." unique_id=1626606331 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -8.763313)
 
 [node name="Tree35" type="Sprite3D" parent="." unique_id=603163267 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -70.47209, 31.108261, -8.763313)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree55" parent="." unique_id=215634210 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -70.47209, 31.108261, -8.763313)
 
 [node name="Tree36" type="Sprite3D" parent="." unique_id=277629090 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -70.47209, 31.108261, 96.27318)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree56" parent="." unique_id=1047469860 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -70.47209, 31.108261, 96.27318)
 
 [node name="Tree37" type="Sprite3D" parent="." unique_id=1344382215 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 96.27318)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree57" parent="." unique_id=1705156489 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 96.27318)
 
 [node name="Tree38" type="Sprite3D" parent="." unique_id=583875881 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 50.02491)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree58" parent="." unique_id=98430545 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 50.02491)
 
 [node name="Tree39" type="Sprite3D" parent="." unique_id=633355398 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 19.515808)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree59" parent="." unique_id=335802006 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, 19.515808)
 
 [node name="Tree40" type="Sprite3D" parent="." unique_id=1002888836 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, -47.547134)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree60" parent="." unique_id=601847784 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, -47.547134)
 
 [node name="Tree41" type="Sprite3D" parent="." unique_id=1764494184 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, -91.31028)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree61" parent="." unique_id=1869111829 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -27.496086, 31.108261, -91.31028)
 
 [node name="Tree13" type="Sprite3D" parent="." unique_id=972631017 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 51.611664)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree62" parent="." unique_id=1028158420 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 51.611664)
 
 [node name="Tree25" type="Sprite3D" parent="." unique_id=2045057606 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 22.294758)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree63" parent="." unique_id=1564199303 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 22.294758)
 
 [node name="Tree26" type="Sprite3D" parent="." unique_id=838370787 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -73.43956)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree64" parent="." unique_id=1062607044 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, -73.43956)
 
 [node name="Tree27" type="Sprite3D" parent="." unique_id=2038217573 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.443665, 31.108261, -73.43956)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree65" parent="." unique_id=1829070873 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.443665, 31.108261, -73.43956)
 
 [node name="Tree28" type="Sprite3D" parent="." unique_id=1783600948 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.443665, 31.108261, 39.3918)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
+
+[node name="Tree66" parent="." unique_id=1495487469 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.443665, 31.108261, 39.3918)
 
 [node name="Tree14" type="Sprite3D" parent="." unique_id=1748314652 groups=["Trees"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 93.77671)
+visible = false
 modulate = Color(0.77254903, 0.6156863, 0.8666667, 1)
 billboard = 2
 texture = ExtResource("4_e2fbs")
 
+[node name="Tree67" parent="." unique_id=94080150 instance=ExtResource("5_gfl13")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.18213, 31.108261, 93.77671)
+
 [node name="Tree2" type="Sprite3D" parent="." unique_id=337641847 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.3184433, 49.76973, -60.84694)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree68" parent="." unique_id=1069840899 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.3184433, 49.76973, -60.84694)
 
 [node name="Tree29" type="Sprite3D" parent="." unique_id=1401429510 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 54.055832, 49.76973, 69.178894)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree69" parent="." unique_id=1463489471 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 54.055832, 49.76973, 69.178894)
 
 [node name="Tree30" type="Sprite3D" parent="." unique_id=736519813 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 71.53317, 49.76973, 38.198967)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree70" parent="." unique_id=1690347360 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 71.53317, 49.76973, 38.198967)
 
 [node name="Tree31" type="Sprite3D" parent="." unique_id=316084478 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 93.41745, 49.76973, 3.7970161)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree71" parent="." unique_id=566770135 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 93.41745, 49.76973, 3.7970161)
 
 [node name="Tree32" type="Sprite3D" parent="." unique_id=1070939140 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 63.858704, 49.76973, -52.956646)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree72" parent="." unique_id=1272042215 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 63.858704, 49.76973, -52.956646)
 
 [node name="Tree42" type="Sprite3D" parent="." unique_id=773177360 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.0283737, 49.76973, -32.69781)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree73" parent="." unique_id=191187094 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -7.0283737, 49.76973, -32.69781)
 
 [node name="Tree43" type="Sprite3D" parent="." unique_id=1309356834 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, -93.52172)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree74" parent="." unique_id=1513680288 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, -93.52172)
 
 [node name="Tree44" type="Sprite3D" parent="." unique_id=1090337574 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, -115.29787)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree75" parent="." unique_id=1636539378 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, -115.29787)
 
 [node name="Tree45" type="Sprite3D" parent="." unique_id=1538205111 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 40.606102, 49.76973, 13.15834)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree76" parent="." unique_id=62460303 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 40.606102, 49.76973, 13.15834)
 
 [node name="Tree46" type="Sprite3D" parent="." unique_id=1268562998 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, 71.09609)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree77" parent="." unique_id=165344560 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 14.658798, 49.76973, 71.09609)
 
 [node name="Tree47" type="Sprite3D" parent="." unique_id=304311815 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 26.569473, 49.76973, 102.93316)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree78" parent="." unique_id=1672457925 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 26.569473, 49.76973, 102.93316)
 
 [node name="Tree33" type="Sprite3D" parent="." unique_id=1132630415 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 51.415924, 49.76973, -104.5728)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree79" parent="." unique_id=1792660681 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 51.415924, 49.76973, -104.5728)
 
 [node name="Tree34" type="Sprite3D" parent="." unique_id=1548315949 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 35.72792, 49.76973, -60.258442)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree80" parent="." unique_id=428481030 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 35.72792, 49.76973, -60.258442)
 
 [node name="Tree15" type="Sprite3D" parent="." unique_id=513165429 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -71.07456, 49.76973, 54.481606)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree81" parent="." unique_id=1317572802 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -71.07456, 49.76973, 54.481606)
 
 [node name="Tree16" type="Sprite3D" parent="." unique_id=1286126451 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -63.279274, 49.76973, 108.32404)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree82" parent="." unique_id=1283756790 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -63.279274, 49.76973, 108.32404)
 
 [node name="Tree17" type="Sprite3D" parent="." unique_id=77616665 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -69.02594, 49.76973, -62.454765)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree83" parent="." unique_id=1027849676 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -69.02594, 49.76973, -62.454765)
 
 [node name="Tree18" type="Sprite3D" parent="." unique_id=1486186652 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -70.91893, 49.61554, -102.093605)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree84" parent="." unique_id=652152913 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -70.91893, 49.61554, -102.093605)
 
 [node name="Tree19" type="Sprite3D" parent="." unique_id=1707490185 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, -24.476921)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree85" parent="." unique_id=432833095 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, -24.476921)
 
 [node name="Tree20" type="Sprite3D" parent="." unique_id=1754042822 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, -89.934525)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree86" parent="." unique_id=230626327 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, -89.934525)
 
 [node name="Tree21" type="Sprite3D" parent="." unique_id=1891859577 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, 81.90993)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree87" parent="." unique_id=1665303198 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -101.765625, 49.76973, 81.90993)
 
 [node name="Tree22" type="Sprite3D" parent="." unique_id=958490453 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, 67.859276)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree88" parent="." unique_id=857215487 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, 67.859276)
 
 [node name="Tree23" type="Sprite3D" parent="." unique_id=337930305 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, -25.01503)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
+
+[node name="Tree89" parent="." unique_id=464360799 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, -25.01503)
 
 [node name="Tree24" type="Sprite3D" parent="." unique_id=1131395251 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, -65.32928)
+visible = false
 modulate = Color(0.39607844, 0.24705882, 0.5254902, 1)
 billboard = 2
 texture = ExtResource("5_wjun0")
 
+[node name="Tree90" parent="." unique_id=907279523 instance=ExtResource("7_4xied")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.581978, 49.76973, -65.32928)
+
 [node name="Tree3" type="Sprite3D" parent="." unique_id=737574981 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -50.467117, 51.539276, 0.26872253)
+visible = false
 modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
 billboard = 2
 texture = ExtResource("6_j3sk6")
+
+[node name="Tree91" parent="." unique_id=1842145660 instance=ExtResource("9_djgpu")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -50.467117, 51.539276, 0.26872253)
 
 [node name="Tree4" type="Sprite3D" parent="." unique_id=1204847398 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 0)
+visible = false
 modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
 billboard = 2
 texture = ExtResource("6_j3sk6")
+
+[node name="Tree92" parent="." unique_id=1434209372 instance=ExtResource("9_djgpu")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 0)
 
 [node name="Tree5" type="Sprite3D" parent="." unique_id=628689910 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -117.17618, 51.858704, 49.244614)
+visible = false
 modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
 billboard = 2
 texture = ExtResource("6_j3sk6")
+
+[node name="Tree93" parent="." unique_id=458124894 instance=ExtResource("9_djgpu")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -117.17618, 51.858704, 49.244614)
 
 [node name="Tree6" type="Sprite3D" parent="." unique_id=1506456990 groups=["Trees"]]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 110.84224)
+visible = false
 modulate = Color(0.33333334, 0.16862746, 0.4745098, 1)
 billboard = 2
 texture = ExtResource("6_j3sk6")
 
+[node name="Tree94" parent="." unique_id=1344650553 instance=ExtResource("9_djgpu")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 110.84224)
+
 [node name="Owl" type="Sprite3D" parent="." unique_id=1656771908]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.65706, 73.29227, 33.09996)
+visible = false
 modulate = Color(0.27058825, 0.1764706, 0.4862745, 1)
 billboard = 2
 texture = ExtResource("7_gfl13")
