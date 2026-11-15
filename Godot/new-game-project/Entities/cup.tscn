@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://0olxx3n70drw"]
+
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_lchnt"]
+[ext_resource type="Texture2D" path="res://Images/Tree1.png" id="2_bqwxe"]
+
+[node name="Tree1" type="Node3D" unique_id=406637194]
+script = ExtResource("1_lchnt")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=837868426]
+texture = ExtResource("2_bqwxe")
