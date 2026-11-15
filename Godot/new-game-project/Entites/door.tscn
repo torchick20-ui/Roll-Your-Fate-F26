@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://32873i7pnylu" path="res://Images/Door.png" id="2_wdhwb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+radius = 15.0
 
 [node name="Door" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_wfnh2")

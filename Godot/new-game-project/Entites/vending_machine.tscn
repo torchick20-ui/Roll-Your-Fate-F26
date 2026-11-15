@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_o2nwm"]
 [ext_resource type="Texture2D" uid="uid://gp8ltviulikm" path="res://Images/VendingMachine.png" id="2_uoav1"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_o2nwm"]
+radius = 15.0
 
 [node name="Vending Machine" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_o2nwm")
@@ -12,7 +13,7 @@ script = ExtResource("1_o2nwm")
 billboard = 2
 texture = ExtResource("2_uoav1")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+[node name="Area3D" type="Area3D" parent="." unique_id=28552862]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
-shape = SubResource("SphereShape3D_vtbqs")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=428310315]
+shape = SubResource("SphereShape3D_o2nwm")

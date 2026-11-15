@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_xo5jt"]
 [ext_resource type="Texture2D" uid="uid://oigawg7ydeoe" path="res://Images/NightHawk.png" id="2_4kcoi"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xo5jt"]
+radius = 15.0
 
 [node name="Night Hawk" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_xo5jt")
@@ -13,7 +14,7 @@ entityName = "Hawk"
 billboard = 2
 texture = ExtResource("2_4kcoi")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+[node name="Area3D" type="Area3D" parent="." unique_id=1489674776]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
-shape = SubResource("SphereShape3D_vtbqs")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=261090382]
+shape = SubResource("SphereShape3D_xo5jt")

@@ -15,6 +15,14 @@ var film: int
 var photos: Array
 var open_album: bool
 var album_position: int
+var scene : int = 0
+
+var turning : bool = false
+var targetRot : float = 0
+var startRot : float = 0
+var turningTimer : float = 0
+
+signal sceneChange(SceneNum : int, player : CharacterBody3D)
 
 func _ready() -> void:
 	for i in self.get_meta("exclude_detection"):
@@ -24,24 +32,56 @@ func _ready() -> void:
 	open_album = false
 	album.set_visible(false)
 	album_position=0;
-	pass
+	sceneChange.emit(0, self)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("Walk Left","Walk Right","Walk Forward","Walk Back")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+	#var input_dir := Input.get_vector("Walk Left","Walk Right","Walk Forward","Walk Back")
+	#var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	#if direction:
+		#velocity.x = direction.x * SPEED
+		#velocity.z = direction.z * SPEED
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
+		#velocity.z = move_toward(velocity.z, 0, SPEED)
+	if Input.is_action_just_pressed("Walk Left") and !turning:
+		turning = true
+		turningTimer = 0
+		if scene == 0:
+			scene = 1 
+			startRot = 0
+			targetRot = 180
+			
+		else:
+			scene = 0
+			startRot = -180
+			targetRot = 0
+	if Input.is_action_just_pressed("Walk Right") and !turning:
+		turning = true
+		turningTimer = 0
+		if scene == 0:
+			scene = 1 
+			startRot = 0
+			targetRot = -180
+			
+		else:
+			scene = 0
+			startRot = 180
+			targetRot = 0
 
+	if turning:
+		rotation.y = deg_to_rad(lerpf(startRot, targetRot, turningTimer))
+		turningTimer += delta
+		if turningTimer >= 1:
+			rotation.y = deg_to_rad(targetRot)
+			turning = false
+		sceneChange.emit(scene, self)
+		
 	move_and_slide()
 	_look()
 	if open_album ==true:
@@ -54,10 +94,23 @@ func _physics_process(delta: float) -> void:
 
 
 func _look()->void:
+	
+	#print(Input.is_action_pressed("Look Left"))
 	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
-	#print(rotate)
-	self.rotation.y-=deg_to_rad(rotate.x*sensitivity)
+	camera.rotation.y-=deg_to_rad(rotate.x*sensitivity)
 	camera.rotation.x-=deg_to_rad(rotate.y*sensitivity)#We don't need to pitch the player up and down, but the camera.
+	
+	#clamps rotation to left and right
+	if camera.rotation.y > 1.3:
+		camera.rotation.y = 1.3
+	if camera.rotation.y < -1.3:
+		camera.rotation.y = -1.3
+	
+	#clamps rotation up and down
+	if camera.rotation.x > .7:
+		camera.rotation.x = .7
+	if camera.rotation.x < -.8:
+		camera.rotation.x = -.8
 	rotate = Vector2()
 	pass
 	
@@ -76,9 +129,8 @@ func _take_photo()->void:
 				#var query = PhysicsRayQueryParameters3D.create(origin, end)
 				#var result = space_state.intersect_ray(query)
 				#if result.get_collider().get_parent().get_script().get_global_name() == :
-				if i.collider.get_parent().has_method("entity"):
+				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName != "Tree":
 					print(i.collider.get_parent().entityName)
-				print(i.collider.get_parent())
 				#print(i.collider_id)
 				
 		#var screen_region := Rect2i(get_viewport().siz, size) 
@@ -103,3 +155,16 @@ func _view_photos()->void:
 	if !photos.is_empty():
 				album.set_texture(ImageTexture.create_from_image(photos[album_position]))
 	pass
+
+func distFromCamline(pos : Vector3, isTree : bool) -> float:
+	var rPos = pos
+	if isTree:
+		rPos.y = 0
+	var minDist = 10000000
+	for i in $Camera3D/DistanceCheckNodes.get_children():
+		var pPos = i.global_position
+		if isTree:
+			pPos.y = 0
+		if minDist > rPos.distance_to(pPos):
+			minDist = rPos.distance_to(pPos)
+	return minDist

@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_qv8cb"]
 [ext_resource type="Texture2D" uid="uid://87xiefbny8dq" path="res://Images/Raccoon.png" id="2_457dx"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_qv8cb"]
+radius = 15.0
 
 [node name="Racoon" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_qv8cb")
@@ -13,7 +14,7 @@ entityName = "Racoon"
 billboard = 2
 texture = ExtResource("2_457dx")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+[node name="Area3D" type="Area3D" parent="." unique_id=1236160471]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
-shape = SubResource("SphereShape3D_vtbqs")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2094200967]
+shape = SubResource("SphereShape3D_qv8cb")
