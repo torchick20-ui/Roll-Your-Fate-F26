@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf0vur4bvtc22"
-path.s3tc="res://.godot/imported/Owl.png-382ae958f8731612b153d71f566b38ef.s3tc.ctex"
+path.s3tc="res://.godot/imported/Owl.png-1eeba27a2f283a789e64c4a1299b2626.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Images/Owl.png"
-dest_files=["res://.godot/imported/Owl.png-382ae958f8731612b153d71f566b38ef.s3tc.ctex"]
+source_file="res://images/Owl.png"
+dest_files=["res://.godot/imported/Owl.png-1eeba27a2f283a789e64c4a1299b2626.s3tc.ctex"]
 
 [params]
 
