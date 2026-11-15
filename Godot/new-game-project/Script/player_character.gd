@@ -9,16 +9,21 @@ var sensitivity = 1.5
 @onready var camera = $Camera3D
 @onready var area_hit = $Camera3D/ShapeCast3D
 @onready var reel = $Label
+@onready var album = $TextureRect
 #const JUMP_VELOCITY = 4.5
-var film: int;
-
-
+var film: int
+var photos: Array
+var open_album: bool
+var album_position: int
 
 func _ready() -> void:
 	for i in self.get_meta("exclude_detection"):
 		area_hit.add_exception(get_node(i))
 	film =self.get_meta("Film_Left")
 	reel.set_text("Remaining Film: "+str(film)) #need to actually get the text, this isn't the right function.
+	open_album = false
+	album.set_visible(false)
+	album_position=0;
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -39,8 +44,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	_look()
-	_take_photo()
+	if open_album ==true:
+		if Input.is_action_just_pressed("Take Photo"):
+			album_position= (album_position+1)%photos.size()
+	else:
+		_take_photo()
 	
+	_view_photos()
 
 
 func _look()->void:
@@ -71,5 +81,25 @@ func _take_photo()->void:
 				print(i.collider.get_parent())
 				#print(i.collider_id)
 				
+		#var screen_region := Rect2i(get_viewport().siz, size) 
+		var screenshot = get_viewport().get_texture().get_image()#.get_region(screen_region)
+		photos.push_back(screenshot)
 		film-=1
 		reel.set_text("Remaining Film: "+str(film))
+	pass
+
+
+func _view_photos()->void:
+	if Input.is_action_just_pressed("Check Camera"):
+		if open_album ==true:
+			print("Close Album")
+			open_album=false
+			album.set_visible(false)
+		else:
+			print("Open Album")
+			open_album=true
+			album.set_visible(true)
+			
+	if !photos.is_empty():
+				album.set_texture(ImageTexture.create_from_image(photos[album_position]))
+	pass
