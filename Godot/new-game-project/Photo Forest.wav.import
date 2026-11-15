@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvynpyxfan2gw"
+path="res://.godot/imported/Photo Forest.wav-e3d6509e14a5903a20820a111120c35e.sample"
+
+[deps]
+
+source_file="res://Photo Forest.wav"
+dest_files=["res://.godot/imported/Photo Forest.wav-e3d6509e14a5903a20820a111120c35e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
