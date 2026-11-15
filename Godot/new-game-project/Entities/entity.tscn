@@ -1,10 +1,18 @@
 [gd_scene format=3 uid="uid://dbccwxulj5g3g"]
 
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_i5xj8"]
-[ext_resource type="Texture2D" path="res://Images/Tree1.png" id="2_t16mo"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://Images/icon.svg" id="2_i5xj8"]
 
-[node name="Tree1" type="Node3D" unique_id=406637194]
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+
+[node name="Sample" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_i5xj8")
+entityName = "Sample"
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=837868426]
-texture = ExtResource("2_t16mo")
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264208238]
+texture = ExtResource("2_i5xj8")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
+shape = SubResource("SphereShape3D_vtbqs")
