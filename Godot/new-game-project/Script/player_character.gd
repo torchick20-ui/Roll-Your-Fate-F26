@@ -91,6 +91,9 @@ func _physics_process(delta: float) -> void:
 		_take_photo()
 	
 	_view_photos()
+	
+	if Input.is_action_just_pressed("Quit Game"):
+		_call_quit()
 
 
 func _look()->void:
@@ -168,3 +171,6 @@ func distFromCamline(pos : Vector3, isTree : bool) -> float:
 		if minDist > rPos.distance_to(pPos):
 			minDist = rPos.distance_to(pPos)
 	return minDist
+
+func _call_quit()->void:
+	get_tree().quit()
