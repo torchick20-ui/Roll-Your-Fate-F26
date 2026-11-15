@@ -123,6 +123,21 @@ offset_right = -0.5200043
 offset_bottom = -0.12800598
 horizontal_alignment = 1
 
+[node name="Label3" type="Label" parent="." unique_id=2055786341]
+visible = false
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.035
+anchor_right = 0.135
+anchor_bottom = 0.136
+offset_left = 434.224
+offset_top = 142.32
+offset_right = 523.48
+offset_bottom = 199.872
+theme_override_font_sizes/font_size = 48
+text = "You win!"
+horizontal_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1122449762]
 anchors_preset = -1
 anchor_left = 0.27

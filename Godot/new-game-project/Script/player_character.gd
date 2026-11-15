@@ -122,10 +122,15 @@ func _take_photo()->void:
 	if Input.is_action_just_pressed("Take Photo"):
 		print("Photo taken")
 		var hits = area_hit.collision_result
+		var vending = false
 		var screenshot = get_viewport().get_texture().get_image()#.get_region(screen_region)
 		if hits.size()<=0:
 			print ("Nothing found")
 		else:
+			for i in hits:
+				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName == "Vending Machine":
+					screenshot = preload("res://Images/VendingMachine.png")
+					vending = true
 			for i in hits:
 				#var space_state = get_world_3d().direct_space_state
 				#var origin = camera.global_position
@@ -133,7 +138,7 @@ func _take_photo()->void:
 				#var query = PhysicsRayQueryParameters3D.create(origin, end)
 				#var result = space_state.intersect_ray(query)
 				#if result.get_collider().get_parent().get_script().get_global_name() == :
-				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName != "Tree":
+				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName != "Tree" and not vending:
 					var temp = i.collider.get_parent().entityName
 					print(i.collider.get_parent().entityName)
 					if temp in picturesTaken:
@@ -142,15 +147,20 @@ func _take_photo()->void:
 						film -= 5
 					elif temp == "Door":
 						get_tree().change_scene_to_file("res://Scenes/door scene.tscn")
-					elif temp == "Vending Machine":
-						screenshot = preload("res://Images/VendingMachine.png")
 				#print(i.collider_id)
 				
 		#var screen_region := Rect2i(get_viewport().siz, size) 
 		photos.push_back(screenshot)
 		film-=1
 		reel.set_text("Remaining Film: "+str(film))
-	pass
+		var win = true
+	
+		for i in picturesTaken:
+			if not i:
+				win = false
+		if win:
+			$Label3.visible = true
+			
 
 
 func _view_photos()->void:
