@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfrw67jn5kxk7"]
 
-[ext_resource type="Script" uid="uid://i4br3gm27jp0" path="res://Scenes/start_button.gd" id="1_totuj"]
-[ext_resource type="Script" uid="uid://cp4tlme5a1uac" path="res://Scenes/exit_button.gd" id="2_hcxxy"]
+[ext_resource type="Script" uid="uid://i4br3gm27jp0" path="res://Script/start_button.gd" id="1_totuj"]
+[ext_resource type="Script" uid="uid://cp4tlme5a1uac" path="res://Script/exit_button.gd" id="2_hcxxy"]
 
 [node name="MainMenu" type="Node2D" unique_id=1468803633]
 
@@ -32,3 +32,23 @@ focus_neighbor_top = NodePath("../Start Button")
 focus_neighbor_bottom = NodePath("../Start Button")
 text = "Exit Game"
 script = ExtResource("2_hcxxy")
+
+[node name="Label" type="Label" parent="Control" unique_id=582377634]
+custom_maximum_size = Vector2(500, 500)
+layout_mode = 0
+offset_left = 573.0
+offset_top = 114.0
+offset_right = 1073.0
+offset_bottom = 449.0
+text = "Search the forest for animals and take photos of them when the flashlight hits them. 
+
+Make sure not to take photos of the cursed objecs in the forest or run out of film.
+
+Left Stick: Film to the other side of the Forest
+Right Stick: Move Camera
+Press Left Stick: Open Photos
+When Photos Open:
+Right Stick Press to Swap Between Photos 
+When Photos Closed:
+Right Stick Press to Take Photos"
+autowrap_mode = 2

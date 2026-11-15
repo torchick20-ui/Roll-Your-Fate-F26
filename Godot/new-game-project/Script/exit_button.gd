@@ -3,7 +3,7 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.grab_focus.call_deferred()
+	
 	pass # Replace with function body.
 
 
@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _pressed() -> void:
-	print("Start Pressed")
+	print("Exit Pressed")
+	get_tree().quit()
 	pass
