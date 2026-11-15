@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dd5cnkmkyo2sw"]
+
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_wfnh2"]
+[ext_resource type="Texture2D" uid="uid://32873i7pnylu" path="res://Images/Door.png" id="2_wdhwb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+
+[node name="Door" type="Node3D" unique_id=1069840899]
+script = ExtResource("1_wfnh2")
+entityName = "Door"
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264208238]
+texture = ExtResource("2_wdhwb")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
+shape = SubResource("SphereShape3D_vtbqs")

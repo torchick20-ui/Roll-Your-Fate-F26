@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://u6e5opfod34u"]
+
+[ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_2jvs4"]
+[ext_resource type="Texture2D" uid="uid://bpofonikucbdj" path="res://Images/Tree1.png" id="2_5vyf8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_miqml"]
+size = Vector3(15, 10, 10)
+
+[node name="Tree1" type="Node3D" unique_id=1964777732]
+script = ExtResource("1_2jvs4")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1664940857]
+texture = ExtResource("2_5vyf8")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=580058336]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1869631516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4336281, 0, 0)
+shape = SubResource("BoxShape3D_miqml")

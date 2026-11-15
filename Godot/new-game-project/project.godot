@@ -13,7 +13,7 @@ config_version=5
 config/name="Roll Your Fate (Fall 26)"
 run/main_scene="uid://css3mpiudynko"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Images/icon.svg"
 
 [dotnet]
 
