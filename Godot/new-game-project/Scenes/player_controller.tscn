@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ctgrrtod7louy" path="res://Script/player_character.gd" id="1_rd8vp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7fo0"]
-size = Vector3(3, 3, 5)
+size = Vector3(3, 3, 250)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4p277"]
 
@@ -21,8 +21,91 @@ current = true
 [node name="ShapeCast3D" type="ShapeCast3D" parent="Camera3D" unique_id=2114423644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
 shape = SubResource("BoxShape3D_c7fo0")
-target_position = Vector3(0, 1.5, -3)
+target_position = Vector3(0, 1.5, -125)
 collide_with_areas = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1012390847]
+target_position = Vector3(0, 0, -20)
+
+[node name="DistanceCheckNodes" type="Node3D" parent="Camera3D" unique_id=1086475972]
+
+[node name="Node3D" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1309224620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Node3D7" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=643694919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -10)
+
+[node name="Node3D12" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=531663577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -20)
+
+[node name="Node3D13" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1408032078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -30)
+
+[node name="Node3D14" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1615485838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -40)
+
+[node name="Node3D2" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1666000908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -50)
+
+[node name="Node3D8" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1044757168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -60)
+
+[node name="Node3D15" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=690919993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -70)
+
+[node name="Node3D16" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=755245865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -80)
+
+[node name="Node3D17" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=975127057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -90)
+
+[node name="Node3D3" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=658933618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -100)
+
+[node name="Node3D9" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=996162926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -110)
+
+[node name="Node3D18" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=365101064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -120)
+
+[node name="Node3D19" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=35913124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -130)
+
+[node name="Node3D20" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=2012626002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -140)
+
+[node name="Node3D4" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=638317076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -150)
+
+[node name="Node3D10" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1243318975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -160)
+
+[node name="Node3D21" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1624566013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -170)
+
+[node name="Node3D22" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1393008674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -180)
+
+[node name="Node3D23" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1448812938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -190)
+
+[node name="Node3D5" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1243811142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -200)
+
+[node name="Node3D11" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=511986343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -210)
+
+[node name="Node3D24" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=5903805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -220)
+
+[node name="Node3D25" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=89639127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -230)
+
+[node name="Node3D26" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1544547034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -240)
+
+[node name="Node3D6" type="Node3D" parent="Camera3D/DistanceCheckNodes" unique_id=1431702978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -250)
 
 [node name="Player Collision" type="CollisionShape3D" parent="." unique_id=2142267180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

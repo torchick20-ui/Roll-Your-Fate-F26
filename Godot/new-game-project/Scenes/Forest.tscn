@@ -554,3 +554,9 @@ texture = ExtResource("11_tnm7e")
 
 [node name="PlayerController" parent="." unique_id=939360635 instance=ExtResource("15_4xied")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.173637, 116.27141)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1687955375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 227.85428, 0)
+light_energy = 10.0
+omni_range = 320.0
+omni_attenuation = 0.3

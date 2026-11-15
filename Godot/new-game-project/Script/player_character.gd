@@ -28,8 +28,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -54,6 +54,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _look()->void:
+	#print(Input.is_action_pressed("Look Left"))
 	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
 	#print(rotate)
 	self.rotation.y-=deg_to_rad(rotate.x*sensitivity)
@@ -103,3 +104,16 @@ func _view_photos()->void:
 	if !photos.is_empty():
 				album.set_texture(ImageTexture.create_from_image(photos[album_position]))
 	pass
+
+func distFromCamline(pos : Vector3, isTree : bool) -> float:
+	var rPos = pos
+	if isTree:
+		rPos.y = 0
+	var minDist = 10000000
+	for i in $Camera3D/DistanceCheckNodes.get_children():
+		var pPos = i.global_position
+		if isTree:
+			pPos.y = 0
+		if minDist > rPos.distance_to(pPos):
+			minDist = rPos.distance_to(pPos)
+	return minDist
