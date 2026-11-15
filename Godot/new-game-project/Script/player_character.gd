@@ -15,6 +15,14 @@ var film: int
 var photos: Array
 var open_album: bool
 var album_position: int
+var scene : int = 0
+
+var turning : bool = false
+var targetRot : float = 0
+var startRot : float = 0
+var turningTimer : float = 0
+
+signal sceneChange(SceneNum : int, player : CharacterBody3D)
 
 func _ready() -> void:
 	for i in self.get_meta("exclude_detection"):
@@ -41,7 +49,39 @@ func _physics_process(delta: float) -> void:
 	#else:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 		#velocity.z = move_toward(velocity.z, 0, SPEED)
+	if Input.is_action_just_pressed("Walk Left") and !turning:
+		turning = true
+		turningTimer = 0
+		if scene == 0:
+			scene = 1 
+			startRot = 0
+			targetRot = 180
+			
+		else:
+			scene = 0
+			startRot = -180
+			targetRot = 0
+	if Input.is_action_just_pressed("Walk Right") and !turning:
+		turning = true
+		turningTimer = 0
+		if scene == 0:
+			scene = 1 
+			startRot = 0
+			targetRot = -180
+			
+		else:
+			scene = 0
+			startRot = 180
+			targetRot = 0
 
+	if turning:
+		rotation.y = deg_to_rad(lerpf(startRot, targetRot, turningTimer))
+		turningTimer += delta
+		if turningTimer >= 1:
+			rotation.y = deg_to_rad(targetRot)
+			turning = false
+		sceneChange.emit(scene, self)
+		
 	move_and_slide()
 	_look()
 	if open_album ==true:

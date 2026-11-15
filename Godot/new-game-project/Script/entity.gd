@@ -1,7 +1,7 @@
 extends Node3D
 class_name entity
 
-@onready var camera : CharacterBody3D = $"../PlayerController"
+@onready var camera : CharacterBody3D = $"../../PlayerController"
 @export var entityName : String = "Tree"
 @onready var sprite : Sprite3D = $Sprite3D
 
