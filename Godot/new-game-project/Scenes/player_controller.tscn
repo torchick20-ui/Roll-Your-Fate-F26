@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ctgrrtod7louy" path="res://Script/player_character.gd" id="1_rd8vp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c7fo0"]
-size = Vector3(3, 3, 250)
+size = Vector3(3, 3, 400)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4p277"]
 
@@ -21,7 +21,7 @@ current = true
 [node name="ShapeCast3D" type="ShapeCast3D" parent="Camera3D" unique_id=2114423644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
 shape = SubResource("BoxShape3D_c7fo0")
-target_position = Vector3(0, 1.5, -125)
+target_position = Vector3(0, 1.5, -200)
 collide_with_areas = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1012390847]

@@ -32,7 +32,7 @@ func _ready() -> void:
 	open_album = false
 	album.set_visible(false)
 	album_position=0;
-	pass
+	sceneChange.emit(0, self)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -97,7 +97,6 @@ func _look()->void:
 	
 	#print(Input.is_action_pressed("Look Left"))
 	var rotate = Input.get_vector("Look Left","Look Right","Look Up","Look Down")
-	print(camera.rotation)
 	camera.rotation.y-=deg_to_rad(rotate.x*sensitivity)
 	camera.rotation.x-=deg_to_rad(rotate.y*sensitivity)#We don't need to pitch the player up and down, but the camera.
 	
@@ -130,9 +129,8 @@ func _take_photo()->void:
 				#var query = PhysicsRayQueryParameters3D.create(origin, end)
 				#var result = space_state.intersect_ray(query)
 				#if result.get_collider().get_parent().get_script().get_global_name() == :
-				if i.collider.get_parent().has_method("entity"):
+				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName != "Tree":
 					print(i.collider.get_parent().entityName)
-				print(i.collider.get_parent())
 				#print(i.collider_id)
 				
 		#var screen_region := Rect2i(get_viewport().siz, size) 

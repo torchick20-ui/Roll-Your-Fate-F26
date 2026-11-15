@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c5aa6gsqktki"]
 
+[ext_resource type="Script" uid="uid://b63s6137uynfo" path="res://Script/spawning_handler.gd" id="1_j3sk6"]
 [ext_resource type="Texture2D" uid="uid://v6uxgm0hx502" path="res://Images/Cup.png" id="1_vt41e"]
 [ext_resource type="Texture2D" uid="uid://32873i7pnylu" path="res://Images/Door.png" id="2_uvcgv"]
 [ext_resource type="Texture2D" uid="uid://gp8ltviulikm" path="res://Images/VendingMachine.png" id="3_trx64"]
@@ -22,6 +23,9 @@ flip_faces = true
 size = Vector3(1, 1, 2.1015625)
 
 [node name="Forest" type="Node3D" unique_id=1297943666]
+
+[node name="Node" type="Node" parent="." unique_id=39439597]
+script = ExtResource("1_j3sk6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=328929152]
 transform = Transform3D(254.5106, 0, 0, 0, 254.5106, 0, 0, 0, 254.5106, 0, 128.12164, 140.17967)
@@ -58,24 +62,28 @@ texture = ExtResource("7_gfl13")
 
 [node name="Squirrel" type="Sprite3D" parent="." unique_id=530221401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.398983, 67.10502, -57.245934)
+visible = false
 modulate = Color(0.21568628, 0.101960786, 0.39607844, 1)
 billboard = 2
 texture = ExtResource("8_4xied")
 
 [node name="Raccoon" type="Sprite3D" parent="." unique_id=254760004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.485435, 62.86084, -46.20835)
+visible = false
 modulate = Color(0.23921569, 0.11372549, 0.42352942, 1)
 billboard = 2
 texture = ExtResource("9_pw6c3")
 
 [node name="NightHawk" type="Sprite3D" parent="." unique_id=1399583228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.68539, 50.332756, 56.920937)
+visible = false
 modulate = Color(0.8862745, 0.7529412, 0.8862745, 1)
 billboard = 2
 texture = ExtResource("10_djgpu")
 
 [node name="Opossum" type="Sprite3D" parent="." unique_id=243617630]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.953762, 35.99779, -111.19433)
+visible = false
 modulate = Color(0.3137255, 0.17254902, 0.40784314, 1)
 billboard = 2
 texture = ExtResource("11_tnm7e")
@@ -375,3 +383,5 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -117.17618, 51.858704, 49.244
 
 [node name="Tree94" parent="Scene2Trees" unique_id=1822016355 instance=ExtResource("9_djgpu")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 110.84224)
+
+[connection signal="sceneChange" from="PlayerController" to="Node" method="screen_enter"]

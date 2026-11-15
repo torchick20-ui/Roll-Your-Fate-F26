@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_lvyij"]
 [ext_resource type="Texture2D" uid="uid://cf0vur4bvtc22" path="res://Images/Owl.png" id="2_wx8pj"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_lvyij"]
+radius = 15.0
 
 [node name="Owl" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_lvyij")
@@ -13,7 +14,7 @@ entityName = "Owl"
 billboard = 2
 texture = ExtResource("2_wx8pj")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+[node name="Area3D" type="Area3D" parent="." unique_id=2041918243]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
-shape = SubResource("SphereShape3D_vtbqs")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=204876042]
+shape = SubResource("SphereShape3D_lvyij")

@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_utpk5"]
 [ext_resource type="Texture2D" uid="uid://v6uxgm0hx502" path="res://Images/Cup.png" id="2_rlihj"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_vtbqs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_utpk5"]
+radius = 15.0
 
 [node name="Cup" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_utpk5")
@@ -13,7 +14,7 @@ entityName = "Cup"
 billboard = 2
 texture = ExtResource("2_rlihj")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1463597924]
+[node name="Area3D2" type="Area3D" parent="." unique_id=780696785]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2024276235]
-shape = SubResource("SphereShape3D_vtbqs")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=637667993]
+shape = SubResource("SphereShape3D_utpk5")
