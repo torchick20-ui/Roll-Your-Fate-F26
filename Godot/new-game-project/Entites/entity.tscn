@@ -8,6 +8,7 @@
 script = ExtResource("1_6e8rh")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1651532242]
+billboard = 2
 
 [node name="Area3D2" type="Area3D" parent="." unique_id=1379324112]
 

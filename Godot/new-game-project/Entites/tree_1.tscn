@@ -10,6 +10,7 @@ size = Vector3(15, 10, 10)
 script = ExtResource("1_2jvs4")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1664940857]
+billboard = 2
 texture = ExtResource("2_5vyf8")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=580058336]
