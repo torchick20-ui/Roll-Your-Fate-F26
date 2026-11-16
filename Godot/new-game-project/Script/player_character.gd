@@ -131,8 +131,9 @@ func _take_photo()->void:
 		else:
 			for i in hits:
 				if i.collider.get_parent().has_method("entity") and i.collider.get_parent().entityName == "Vending Machine":
-					screenshot = preload("res://Images/VendingMachine.png")
+					screenshot = Image.load_from_file("res://Images/VendingMachine.png")
 					vending = true
+					print ("penis")
 			for i in hits:
 				#var space_state = get_world_3d().direct_space_state
 				#var origin = camera.global_position
