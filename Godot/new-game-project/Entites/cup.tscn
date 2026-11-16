@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bje4hoh4nycfy" path="res://Script/entity.gd" id="1_utpk5"]
 [ext_resource type="Texture2D" uid="uid://v6uxgm0hx502" path="res://Images/Cup.png" id="2_rlihj"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_utpk5"]
-radius = 15.0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vtbqs"]
+height = 9.0
+radius = 10.0
 
 [node name="Cup" type="Node3D" unique_id=1069840899]
 script = ExtResource("1_utpk5")
@@ -16,5 +17,5 @@ texture = ExtResource("2_rlihj")
 
 [node name="Area3D2" type="Area3D" parent="." unique_id=780696785]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=637667993]
-shape = SubResource("SphereShape3D_utpk5")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D2" unique_id=1210547707]
+shape = SubResource("CylinderShape3D_vtbqs")
