@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://i4br3gm27jp0" path="res://Script/start_button.gd" id="1_totuj"]
 [ext_resource type="Script" uid="uid://cp4tlme5a1uac" path="res://Script/exit_button.gd" id="2_hcxxy"]
 [ext_resource type="AudioStream" uid="uid://bfxi5gdj74ia0" path="res://Script/Photo Forest.wav" id="3_ur25d"]
+[ext_resource type="Script" uid="uid://cspgo8hkw0x6s" path="res://Scenes/audio_stream_player.gd" id="4_eotax"]
 
 [node name="MainMenu" type="Node2D" unique_id=1468803633]
 
@@ -57,3 +58,4 @@ autowrap_mode = 2
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=610760900]
 stream = ExtResource("3_ur25d")
 autoplay = true
+script = ExtResource("4_eotax")

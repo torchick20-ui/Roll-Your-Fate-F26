@@ -119,6 +119,8 @@ func _look()->void:
 	
 
 func _take_photo()->void:
+	if film <= 0:
+		return
 	if Input.is_action_just_pressed("Take Photo"):
 		print("Photo taken")
 		var hits = area_hit.collision_result
@@ -154,7 +156,8 @@ func _take_photo()->void:
 		film-=1
 		reel.set_text("Remaining Film: "+str(film))
 		var win = true
-	
+		if film < 0:
+			film = 0
 		for i in picturesTaken:
 			if not picturesTaken[i]:
 				win = false

@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b6qd3kirr7ci8" path="res://Images/Opossum.png" id="11_tnm7e"]
 [ext_resource type="AudioStream" uid="uid://bfxi5gdj74ia0" path="res://Script/Photo Forest.wav" id="14_gfl13"]
 [ext_resource type="PackedScene" uid="uid://0fagbk3765yo" path="res://Scenes/player_controller.tscn" id="15_4xied"]
+[ext_resource type="Script" uid="uid://cspgo8hkw0x6s" path="res://Scenes/audio_stream_player.gd" id="15_pw6c3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2fbs"]
 albedo_color = Color(0, 0, 0, 1)
@@ -388,5 +389,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -102.40588, 51.858704, 110.84
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=186109283]
 stream = ExtResource("14_gfl13")
 autoplay = true
+script = ExtResource("15_pw6c3")
 
 [connection signal="sceneChange" from="PlayerController" to="Node" method="screen_enter"]
